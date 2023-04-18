@@ -17,4 +17,4 @@ spp
 
 
 magick -define jpeg:size=200x200 hatching_orig.jpg -thumbnail '100x100>' \
--background skyblue -gravity center -extent 100x100 pad_extent.gif
+-background white -gravity center -extent 500x800 pad_extent.gif
