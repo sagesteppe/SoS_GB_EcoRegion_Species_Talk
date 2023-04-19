@@ -15,8 +15,3 @@ spp %>%
   filter(Level != 'Species') %>% 
   write.csv(., '../data/slides_for_talk.csv')
 
-
-
-
-magick -define jpeg:size=200x200 hatching_orig.jpg -thumbnail '100x100>' \
--background white -gravity center -extent 500x800 pad_extent.gif

@@ -2,6 +2,7 @@ library(tidyverse)
 library(sf)
 library(terra)
 library(tigris)
+library(ggthemes)
 
 setwd('~/Documents/SoS_GB_EcoRegion_Species_Talk/scripts')
 # import cartographic dataset here
@@ -20,8 +21,6 @@ gb <- st_read('../data/spatial/NA_CEC_Eco_Level3/NA_CEC_Eco_Level3.shp') %>%
   st_transform(4326)
 
 gb_bb <- gb %>% 
-  st_transform(5070) %>% 
-  st_buffer(5000) %>% 
   st_transform(4326) %>% 
   st_bbox() 
 
@@ -32,15 +31,11 @@ gb_v_bb <- gb %>%
   vect() %>% 
   ext()
 
-project(gb_v_bb, to = 'epsg:5070') 
-
 # import state boundaries here
 st <- states() %>% 
   filter(STUSPS %in% c('NV', 'CA', 'ID', 'UT', 'AZ', 'OR')) %>% 
   select(STUSPS) %>% 
   st_transform(4326)
-
-st <- st_crop(st, gb_bb)
 
 # import tree cover for forest cover
 
@@ -73,30 +68,74 @@ preds <- crop(preds, gb_v_bb)
 
 rm(p2preds, files, omernik)
 
-p37 <- as.data.frame(preds[[37]], xy= T)
-p37 <- p37 %>% 
-  rename(species = 3) %>% 
-  mutate(species = jitter(species))
+## import occurrences here
+
+occ_data <- st_read(
+  '/media/sagesteppe/ExternalHD/SoS_GB/scouting/data/SDM-occ/SDM-occ.shp', 
+  quiet = T) %>% 
+  st_transform(4326)
 
 
-library(ggthemes)
+#' plot many same sdm maps
+#' 
+#' @param x a raster stack of species to plot
+#' @param y an sf tibble of the same species occurrence data to plot
+#' @param path_dir directory to save the outfiles
 
-ggplot() +
-  geom_tile(data = hillshade, aes(x = x, y = y, fill = lyr1))  +
-  scale_fill_gradient(low = "grey50", high = "grey100") +
-  guides(fill = 'none') +
-  ggnewscale::new_scale_fill() + 
+map_maker_fn <- function(x, y, path_dir, name){
   
-  geom_tile(data = dem, aes(x = x, y = y, fill = elevation_1KMmd_GMTEDmd)) + 
-  scale_fill_viridis_c(direction = -1, alpha = 0.3) + 
-  guides(fill = 'none') +
-  ggnewscale::new_scale_fill() + 
   
-  geom_raster(data = p37, aes(x = x, y = y, fill = species)) + 
-  scale_fill_distiller('Probability of Suitable Habitat"', 
-                       palette = "RdPu", direction = 1) + 
+  spp <- gsub('_', ' ', name)
+  occurrence <- filter(y, species == spp)
   
-  geom_sf(data = st, fill = NA) + 
+  pred <- as.data.frame(x, xy= T)
+  pred <- pred %>% 
+    rename(species = 3) %>% 
+    mutate(species = jitter(species))
   
-  theme_void() + 
-  theme(legend.position = 'bottom')
+  ggplot() +
+    geom_tile(data = hillshade, aes(x = x, y = y, fill = lyr1))  +
+    scale_fill_gradient(low = "grey50", high = "grey100") +
+    guides(fill = 'none') +
+    ggnewscale::new_scale_fill() + 
+    
+    geom_tile(data = dem, aes(x = x, y = y, fill = elevation_1KMmd_GMTEDmd)) + 
+    scale_fill_viridis_c(direction = -1, alpha = 0.3) + 
+    guides(fill = 'none') +
+    ggnewscale::new_scale_fill() + 
+    
+    geom_tile(data = pred, aes(x = x, y = y, fill = species)) + 
+    scale_fill_distiller('Probability of suitable habitat      ', 
+                         palette = "RdPu", direction = 1, 
+                         breaks=c(1, 2.5, 4), limits = c(0.9,4.1),
+                         labels=c("Mild", "Medium", "High")) + 
+    
+    geom_sf(data = st, fill = NA, lwd = 2) + 
+    geom_sf(data = occurrence, shape = 18, color = 'black') + 
+    
+    coord_sf(xlim = c(gb_bb[[1]], gb_bb[[3]]), 
+             ylim = c(gb_bb[[2]], gb_bb[[4]]), expand = F) + 
+    theme_void() + 
+    
+    theme(legend.position = 'bottom', 
+          legend.box.background = element_rect(color="black", linewidth = 1),
+          legend.box.margin = margin(2, 60, 2, 60), 
+    )
+  
+  ggsave(filename = file.path(path_dir, spp), plot = last_plot(), 
+         width = 480, height = 480, units = "px",
+         dpi = 72, device = 'png', bg = 'white')
+  
+}
+
+
+for (i in 1:(dim(preds)[3])){
+  
+  map_maker_fn(x = preds[[i]], y = occ_data, name = names(preds[[i]]), path_dir = '../figures/maps')
+  
+}
+
+
+
+
+
