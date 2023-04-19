@@ -1,0 +1,6 @@
+# make herbarium images a very similar size 
+mogrify -resize 1395x1795 -quality 100 -background white -gravity center -extent 1400x1800 -path ../specimens-crop *.jpg
+
+# pad illustrations to images with a white background  500px800
+mogrify -resize 495x795 -quality 100 -background white -gravity center -extent 500x800 -path ../illustration-crop *.jpg # first downsize all of them 
+

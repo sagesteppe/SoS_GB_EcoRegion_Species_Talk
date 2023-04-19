@@ -10,8 +10,10 @@ spp <- read.csv('../data/slide_order.csv') %>%
            is.na(Genus) ~ 'Infrafamily'
          ))
 
-spp
 
+spp %>% 
+  filter(Level != 'Species') %>% 
+  write.csv(., '../data/slides_for_talk.csv')
 
 
 
