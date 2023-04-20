@@ -14,12 +14,16 @@ montage -label '%f' Achnatherum_lemmonii-Keir_Morse-1.jpeg Achnatherum_lemmonii-
 -background '#B0A3D4' -geometry 350x450+2+2  tile_x2.png
 
 
-# we can find the pairs of files using the code below;
+# we can find the pairs of files and add them to a montage using the code below
 
 for i in *1.jpeg; do 
   species=${i%%-*} # this records the species name. 
-  files=$(find . -name "*$species*" | sort)
-  echo "$files"
+  j=$(find . -name "*$species*2.jpeg")
+  i_photographer=$(echo $i | awk -F'-' '{print $2}' | sed 's/_/ /g')
+  j_photographer=$(echo $j | awk -F'-' '{print $2}' | sed 's/_/ /g')
+  montage -label "$i_photographer"   $i  \
+          -label "$j_photographer"   $j  \
+          -tile x2 -background '#B0A3D4' -geometry 350x450+2+2  ../montages/${species}.png
 done
 
 
