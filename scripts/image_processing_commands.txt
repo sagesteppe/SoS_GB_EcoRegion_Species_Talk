@@ -4,3 +4,22 @@ mogrify -resize 1395x1795 -quality 100 -background white -gravity center -extent
 # pad illustrations to images with a white background  500px800
 mogrify -resize 495x795 -quality 100 -background white -gravity center -extent 500x800 -path ../illustration-crop *.jpg # first downsize all of them 
 
+
+# resize all images for the first species plate slide 
+mogrify -resize 700x900 -quality 100 ../pictures-crop *.jpg # first downsize all of them 
+
+mosaic two images per species
+
+montage -label '%f' Achnatherum_lemmonii-Keir_Morse-1.jpeg Achnatherum_lemmonii-Keir_Morse-2.jpeg -tile x2 \
+-background '#B0A3D4' -geometry 350x450+2+2  tile_x2.png
+
+
+# we can find the pairs of files using the code below;
+
+for i in *1.jpeg; do 
+  species=${i%%-*} # this records the species name. 
+  files=$(find . -name "*$species*" | sort)
+  echo "$files"
+done
+
+
