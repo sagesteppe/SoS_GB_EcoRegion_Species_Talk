@@ -4,15 +4,13 @@ mogrify -resize 1395x1795 -quality 100 -background white -gravity center -extent
 # pad illustrations to images with a white background  500px800
 mogrify -resize 495x795 -quality 100 -background white -gravity center -extent 500x800 -path ../illustration-crop *.jpg # first downsize all of them 
 
+# make seed images smaller 
+mogrify -resize 480x360 -quality 100 -background white -gravity center -extent 500x380 -path ../seeds_small *.jpg
 
 # resize all images for the first species plate slide 
 mogrify -resize 700x900 -quality 100 ../pictures-crop *.jpg # first downsize all of them 
 
 mosaic two images per species
-
-montage -label '%f' Achnatherum_lemmonii-Keir_Morse-1.jpeg Achnatherum_lemmonii-Keir_Morse-2.jpeg -tile x2 \
--background '#B0A3D4' -geometry 350x450+2+2  tile_x2.png
-
 
 # we can find the pairs of files and add them to a montage using the code below
 
@@ -23,7 +21,9 @@ for i in *1.jpeg; do
   j_photographer=$(echo $j | awk -F'-' '{print $2}' | sed 's/_/ /g')
   montage -label "$i_photographer"   $i  \
           -label "$j_photographer"   $j  \
-          -tile x2 -background '#B0A3D4' -geometry 350x450+2+2  ../montages/${species}.png
+          -tile x2 -background '#BABFD1' -geometry 550x530+2+2  ../montages/${species}.png
 done
+
+
 
 

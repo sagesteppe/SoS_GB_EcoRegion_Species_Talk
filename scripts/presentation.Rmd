@@ -1,0 +1,62 @@
+---
+title: "Great Basin Target Species"
+author: <font color="black"> Jess Kindred </font><br>Senior Botanist; BLM Great Basin Plant Conservation and Restoration Program <br><br> <font color="black"> Reed Clark Benkendorf </font><br>Senior Botanist; The Chicago Botanic Garden<br>
+date: "April 28^th^, 2023"
+output:
+  ioslides_presentation:
+subtitle: Who to collect and How?
+---
+
+<style>
+
+slide.title-slide h1 {
+  font-size: 2.0em;
+  line-height: 1.5;
+}
+
+slide.title-slide h2 {
+  font-size: 1.0em;
+  text-align: left;
+  color: #4E2A84;		
+  line-height: 1.2;
+}
+
+slide.backdrop {
+  background: black;
+}
+
+h2 { 
+text-align: right;
+ color: #4E2A84;		
+}
+
+h3 { 
+ color: #3399ff;		
+}
+
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message  = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+
+## Overview
+
+```{r}
+'#FFC759' # style colour 2
+'#FF7B9C' # style 1
+'#607196' # text
+'#BABFD1' # borders
+'#E8E9ED' # background
+
+
+```
+
+
+
+
+

@@ -75,7 +75,6 @@ occ_data <- st_read(
   quiet = T) %>% 
   st_transform(4326)
 
-
 #' plot many same sdm maps
 #' 
 #' @param x a raster stack of species to plot
@@ -83,7 +82,6 @@ occ_data <- st_read(
 #' @param path_dir directory to save the outfiles
 
 map_maker_fn <- function(x, y, path_dir, name){
-  
   
   spp <- gsub('_', ' ', name)
   occurrence <- filter(y, species == spp)
@@ -118,13 +116,17 @@ map_maker_fn <- function(x, y, path_dir, name){
     theme_void() + 
     
     theme(legend.position = 'bottom', 
-          legend.box.background = element_rect(color="black", linewidth = 1),
+          plot.background = element_rect(
+            fill = "white", colour = "#FFC759", linewidth = 1),
+          panel.background = element_rect(fill = 'transparent'),
+          legend.box.background = element_rect(
+            color='#FFC759', fill = "transparent", linewidth = 1),
           legend.box.margin = margin(2, 60, 2, 60), 
     )
   
   ggsave(filename = file.path(path_dir, spp), plot = last_plot(), 
-         width = 480, height = 480, units = "px",
-         dpi = 72, device = 'png', bg = 'white')
+         width = 420, height = 420, units = "px",
+         dpi = 72, device = 'png', bg = 'transparent')
   
 }
 
