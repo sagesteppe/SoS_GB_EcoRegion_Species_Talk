@@ -13,7 +13,6 @@ mogrify -resize 700x900 -quality 100 ../pictures-crop *.jpg # first downsize all
 mosaic two images per species
 
 # we can find the pairs of files and add them to a montage using the code below
-
 for i in *1.jpeg; do 
   species=${i%%-*} # this records the species name. 
   j=$(find . -name "*$species*2.jpeg")

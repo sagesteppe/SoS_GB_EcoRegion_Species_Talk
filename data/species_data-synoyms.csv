@@ -4,13 +4,17 @@ Achnatherum hymenoides,Stipa hymenoides,Roem. & Schult.,Old
 Achnatherum hymenoides,Eriocoma hymenoides,(Roem. & Schult.) Rydb.,New
 Achnatherum lemmonii,Stipa lemmonii,(Vasey) Scribn.,Old
 Achnatherum lemmonii,Stipa columbiana,Macoun,Old
+Achnatherum lemmonii,Eriocoma lemmonii,(Vasey) Romasch.,New
 Achnatherum lettermanii,Stipa lettermannii,Vasey,Old
+Achnatherum lettermanii,Eriocoma lettermanii,(Vasey) Romasch.,New
 Achnatherum nevadense,Stipa nevadensis,B.L. Johnson,Old
+Achnatherum nevadense,Eriocoma nevadensis,(B.L. Johnson ) Romasch.,New
 Achnatherum occidentale,Stipa occidentalis,Thurb. ex S. Watson,Old
+Achnatherum occidentale,Eriocoma occidentalis,(Thurb. ex S. Watson) Romasch.,New
 Achnatherum speciosum,Stipa speciosa,Trin. & Rupr.,Old
 Achnatherum speciosum,Pappostipa speciosa,(Trin. & Rupr.) Romasch,New
 Achnatherum thurberianum,Stipa thurberiana,Piper,Old
-Achnatherum thurberianum,Stipa occidentalis,Thurb. ex Torr.,Old
+Achnatherum thurberianum,Eriocoma thurberiana,(Piper) Romasch.,New
 Achnatherum webberi,Stipa webberi,(Thurb.) B.L. Johnson,Old
 Achnatherum webberi,Oryzopsis webberi,(Thurb.) Benth. ex Vasey,Old
 Achnatherum webberi,Eriocoma webberi,Thurb.,New
@@ -39,7 +43,7 @@ Eriogonum heracleoides,NA,NA,NA
 Eriogonum ovalifolium,NA,NA,NA
 Eriogonum umbellatum,NA,NA,NA
 Festuca idahoensis,NA,NA,NA
-Heliomeris multiflora,NA,NA,NA
+Heliomeris multiflora,Viguieria multiflora,(Nutt) S.F. Blake,Old
 Hesperostipa comata,Stipa comata,Trin. & Rupr.,Old
 Hilaria jamesii,Pleuraphis jamesii,Torr.,Old
 Koeleria macrantha,Koeleria nitida,Nutt.,Old

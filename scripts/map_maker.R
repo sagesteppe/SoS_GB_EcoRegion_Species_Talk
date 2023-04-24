@@ -117,11 +117,11 @@ map_maker_fn <- function(x, y, path_dir, name){
     
     theme(legend.position = 'bottom', 
           plot.background = element_rect(
-            fill = "white", colour = "#FFC759", linewidth = 1),
-          panel.background = element_rect(fill = 'transparent'),
+            fill = "transparent", colour = "#FFC759", linewidth = 1),
+          panel.background = element_rect(fill = 'white'),
           legend.box.background = element_rect(
             color='#FFC759', fill = "transparent", linewidth = 1),
-          legend.box.margin = margin(2, 60, 2, 60), 
+          legend.box.margin = margin(2, 40, 2, 40), 
     )
   
   ggsave(filename = file.path(path_dir, spp), plot = last_plot(), 
@@ -129,7 +129,6 @@ map_maker_fn <- function(x, y, path_dir, name){
          dpi = 72, device = 'png', bg = 'transparent')
   
 }
-
 
 for (i in 1:(dim(preds)[3])){
   
