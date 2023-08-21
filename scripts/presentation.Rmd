@@ -52,8 +52,6 @@ knitr::opts_chunk$set(warning = FALSE)
 '#607196' # text
 '#BABFD1' # borders
 '#E8E9ED' # background
-
-1920/3
 ```
 
 

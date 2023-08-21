@@ -1,82 +1,82 @@
-Taxon_treated,tjm2,fpnw,imf,auf3
-Apiaceae,,,IIIA 340,613
-Lomatium,,,IIIA 394,628
-Lomatium dissectum,,,IIIA 398,629
-Lomatium nudicaule,,,IIIA 419,632
-Lomatium triternatum,,,IIIA 416,633
-Asclepiadaceae,,,IV 31,51
-Asclepias,,,IV 35,51
-Asclepias fascicularis,,,IV 38,53
-Asclepias speciosa,,,IV 40,54
-Asteraceae,,,V,131
-Cichorideae,,,V 424,
-Agoseris glauca,,,V 428,138
-Agoseris grandiflora,,,V 432,138
-Nothocalais troximoides,,,V 427,NA
-Crepis acuminata,,,V 462,176
-Crepis occidentalis,,,V 464,177
-Heliantheae,,,V 15,NA
-Balsamorhiza hookeri,,,V 20,158
-Balsamorhiza sagittata,,,V 20,158
-Heliomeris multiflora,,,V 24,238
-Astereae,,,V 194,NA
-Dieteria canescens,,,V 265,213
-Erigeron bloomeri,,,V 320,NA
-Erigeron linearis,,,V 320,187
-Erigeron pumilus,,,V 324,189
-Erigeron speciosus,,,V 312,190
-Artemisia tridentata,,,V 158,150
-Chaenactis douglasii,,,V 116,163
-Hydrophyllaceae,,,IV 155,316
-Phacelia,,,IV 157,319
-Phacelia hastata,,,IV 180,323
-Cleomaceae,,,IIB 160,97
-Pertitoma,,,IIB 163,97
-Peritoma lutea,,,IIB 164,97
-Fabaceae,,,IIIB,336
-Astragalus,,,IIIB 39,340
-Astragalus eremiticus,,,IIIB 108,362
-Astragalus filipes,,,IIIB 78,363
-Dalea,,,IIIB 32,382
-Dalea ornata,,,IIIB 36,NA
-Dalea searlsiae,,,IIIB 36,384
-Malvaceae,,,IIB 19,419
-Sphaeralcea,,,IIB 22,422
-Sphaeralcea ambigua,,,IIB 24,422
-Sphaeralcea coccinea,,,IIB 34,422
-Sphaeralcea grossulariifolia,,,IIB 29,423
-Sphaeralcea munroana,,,IIB 28,423
-Poaceae,,,VI 175,685
-Stipeae,,,VI 346,
-Achnatherum hymenoides,,,VI 350,783
-Achnatherum lemmonii,,,VI 356,784
-Achnatherum lettermanii,,,VI 358,784
-Achnatherum nevadense,,,VI 356,NA
-Achnatherum occidentale,,,VI 356,
-Achnatherum speciosum,,,VI 360,785
-Achnatherum thurberianum,,,VI 354,785
-Achnatherum webberi,,,VI 353,NA
-Hesperostipa comata,,,VI 360,782
-Triticeae,,,VI 292,
-Elymus elymoides,,,VI 308,724
-Leymus cinereus,,,VI 303,723
-Pseudoroegneria spicata,,,VI 327,727
-Poeae,,,VI 184,
-Koeleria macrantha,,,VI 254,743
-Festuca idahoensis,,,VI 214,
-Poa secunda,,,VI 246,769
-Pleuraphis jamesii,,,VI 448,739
-Sporobolus cryptandrus,,,VI 422,780
-Polygonaceae,,,IIA 196,471
-Eriogonum ,,,IIA 254,471
-Eriogonum heracleoides,,,IIA 328,480
-Eriogonum ovalifolium,,,IIA 316,483
-Eriogonum umbellatum,,,IIA 321,486
-Plantaginaceae,,,NA,NA
-Penstemon ,,,IV 370,579
-Penstemon acuminatus,,,IV 414,NA
-Penstemon deustus,,,IV 388,588
-Penstemon eatonii,,,IV 445,589
-Penstemon pachyphyllus,,,IV 419,594
-Penstemon palmeri,,,IV 426,594
-Penstemon speciosus,,,IV 438,598
+Taxon_treated,tjm2,tdjm,fpnw,imf,auf3
+Apiaceae,171,86,635,IIIA 340,613
+Lomatium,184,92,648,IIIA 394,628
+Lomatium dissectum,188,93,655,IIIA 398,629
+Lomatium nudicaule,189,NA,648,IIIA 419,632
+Lomatium triternatum,192,93,649,IIIA 416,633
+Asclepiadaceae,202,98,418,IV 31,51
+Asclepias,203,99,419,IV 35,51
+Asclepias fascicularis,204,100,419,IV 38,53
+Asclepias speciosa,206,100,419,IV 40,54
+Asteraceae,211,102,518,V,131
+Cichorideae,NA,NA,519,V 424,NA
+Agoseris glauca,234,112,535,V 428,138
+Agoseris grandiflora,234,NA,535,V 432,138
+Nothocalais troximoides,390,NA,599,V 427,NA
+Crepis acuminata,293,140,564,V 462,176
+Crepis occidentalis,294,140,564,V 464,177
+Heliantheae,NA,NA,NA,V 15,NA
+Balsamorhiza hookeri,258,NA,550,V 20,158
+Balsamorhiza sagittata,258,123,549,V 20,158
+Heliomeris multiflora,346,156,585,V 24,238
+Astereae,NA,NA,NA,V 194,NA
+Dieteria canescens,302,165,566,V 265,213
+Erigeron bloomeri,317,145,571,V 320,NA
+Erigeron linearis,321,NA,571,V 320,187
+Erigeron pumilus,322,146,573,V 324,189
+Erigeron speciosus,,NA,574,V 312,190
+Artemisia tridentata,253,120,545,V 158,150
+Chaenactis douglasii,276,129,556,V 116,163
+Hydrophyllaceae,450,338,436,IV 155,316
+Phacelia,485,342,439,IV 157,319
+Phacelia hastata,494,347,440,IV 180,323
+Cleomaceae,650,250,274,IIB 160,97
+Pertitoma,652,250,274,IIB 163,97
+Peritoma lutea,652,250,274,IIB 164,97
+Fabaceae,719,292,125,IIIB,336
+Astragalus,729,295,129,IIIB 39,340
+Astragalus eremiticus,NA,NA,140/160,IIIB 108,362
+Astragalus filipes,740,NA,132/159,IIIB 78,363
+Dalea,754,308,162,IIIB 32,382
+Dalea ornata,754,NA,162,IIIB 36,NA
+Dalea searlsiae,754,309,NA,IIIB 36,384
+Malvaceae,876,370,268,IIB 19,419
+Sphaeralcea,896,374,271,IIB 22,422
+Sphaeralcea ambigua,896,375,NA,IIB 24,422
+Sphaeralcea coccinea,NA,NA,272,IIB 34,422
+Sphaeralcea grossulariifolia,896,NA,272,IIB 29,423
+Sphaeralcea munroana,897,NA,272,IIB 28,423
+Poaceae,1405,554,756,VI 175,685
+Stipeae,NA,,NA,VI 346,
+Achnatherum hymenoides,1493,559,771,VI 350,783
+Achnatherum lemmonii,1493,559,NA,VI 356,784
+Achnatherum lettermanii,1493,NA,772,VI 358,784
+Achnatherum nevadense,1494,559,NA,VI 356,NA
+Achnatherum occidentale,1494,559,772,VI 356,
+Achnatherum speciosum,1494,559,NA,VI 360,785
+Achnatherum thurberianum,1496,560,771,VI 354,785
+Achnatherum webberi,1496,560,771,VI 353,NA
+Hesperostipa comata,1493,579,800,VI 360,782
+Triticeae,NA,NA,761,VI 292,
+Elymus elymoides,1446,574,793,VI 308,724
+Leymus cinereus,1446,584,803,VI 303,723
+Pseudoroegneria spicata,1447,NA,819,VI 327,727
+Poeae,NA,,NA,VI 184,NA
+Koeleria macrantha,1460,582,802,VI 254,743
+Festuca idahoensis,1452,NA,798,VI 214,735
+Poa secunda,1480,595,814,VI 246,769
+Pleuraphis jamesii,1456,592,NA,VI 448,739
+Sporobolus cryptandrus,1489,600,825,VI 422,780
+Polygonaceae,1074,420,323,IIA 196,471
+Eriogonum ,1083,421,,IIA 254,471
+Eriogonum heracleoides,1099,NA,326,IIA 328,480
+Eriogonum ovalifolium,1104,430,329,IIA 316,483
+Eriogonum umbellatum,1108,432,326,IIA 321,486
+Plantaginaceae,1001,NA,452,NA,NA
+Penstemon ,1017,493,459,IV 370,579
+Penstemon acuminatus,NA,NA,461,IV 414,NA
+Penstemon deustus,1022,NA,462,IV 388,588
+Penstemon eatonii,1022,493,465,IV 445,589
+Penstemon pachyphyllus,NA,NA,NA,IV 419,594
+Penstemon palmeri,1025,494,462,IV 426,594
+Penstemon speciosus,1026,NA,465,IV 438,598

@@ -1,4 +1,4 @@
-Species,notes,elevation,landforms
+name,notes,elevation,landforms
 Achnatherum lettermanii,"Meadows, sagebrush slopes, or open forest from mid-montane to subalpine",,
 Achnatherum nevadense,Dry foothills through sagebrush to open forests,,
 Achnatherum occidentale,"Dry to moderately moist mountain slopes, in meadows,  sagebrush to open forest",,
@@ -12,7 +12,7 @@ Crepis acuminata,"Dry lowlands to valleys, generally in sagebrush.",,
 Dieteria canescens,"Dry and open, often disturbed, area from sagebrush to montane",,
 Elymus elymoides,Many areas; especially disturbed sagebrush and Pinon-Juniper,,
 Achnatherum hymenoides,"Sandy soils from valley bottoms to foothills in desert scrub, sagebrush, and Pinon-juniper.",,
-Eriogonum heracleoides,,,
+Eriogonum heracleoides,Widespread,,
 Eriogonum ovalifolium,Widespread,,
 Eriogonum umbellatum,Widespread,,
 Hesperostipa comata,"Dry valleys to subalpine conifer woodlands, generally sandy to rocky soils",,
